@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.0.1",
+    "http-errors": "^2.0.0",
+    "mongodb": "^5.0.0",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7"
+  },
+  "name": "shoppingo-express",
+  "description": "ShoppinGo Shop App Backend Project - NodeJS & Express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js localhost 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highpriv/shoppingo-express.git"
+  },
+  "author": "Canberk BEREN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/highpriv/shoppingo-express/issues"
+  },
+  "homepage": "https://github.com/highpriv/shoppingo-express#readme"
+}
