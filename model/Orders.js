@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 const Search = require("../model/Search");
 AutoID = mongoose.Types.ObjectId;
 
-
-
 const schemaOrders = new mongoose.Schema(
   {
     _id: {
@@ -14,11 +12,11 @@ const schemaOrders = new mongoose.Schema(
       required: true,
       default: AutoID,
     },
-    productID:{
-        type: ObjectID,
-        required: true,
-        default: null,
-        ref: "Products"
+    productID: {
+      type: ObjectID,
+      required: true,
+      default: null,
+      ref: "Products",
     },
     purchaseDateTime: {
       type: Date,
@@ -34,7 +32,7 @@ const schemaOrders = new mongoose.Schema(
       type: ObjectID,
       required: false,
       default: null,
-      ref: "Users",
+      ref: "User",
     },
     lang: {
       type: String,
@@ -54,7 +52,7 @@ const schemaOrders = new mongoose.Schema(
         "cancelled",
         "returned",
         "completed",
-        "refunded"
+        "refunded",
       ],
       default: "pending",
     },
