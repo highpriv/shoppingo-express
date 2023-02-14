@@ -1,6 +1,4 @@
 // ? Node modules.
-const { required } = require("joi");
-const { ObjectID, ObjectId } = require("mongodb");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
@@ -9,11 +7,7 @@ AutoID = mongoose.Types.ObjectId;
 // ? Schema.
 const userSchema = new mongoose.Schema(
   {
-    _id: {
-      type: ObjectID,
-      required: false,
-      default: AutoID,
-    },
+    id: AutoID,
     name: String,
     lastname: String,
     phone: String,
