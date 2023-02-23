@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const OrderController = require("./OrderController");
+const AuthController = require("./AuthController");
+
 
 const { VERSION, NODE_ENV } = process.env;
 
@@ -35,3 +38,5 @@ module.exports.controllerRootSlash = function (req, res, next) {
     }
 
 };
+
+export { OrderController, AuthController }
