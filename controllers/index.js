@@ -39,4 +39,5 @@ module.exports.controllerRootSlash = function (req, res, next) {
 
 };
 
-export { OrderController, AuthController }
+module.exports.AuthController = AuthController;
+module.exports.OrderController = OrderController;

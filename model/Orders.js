@@ -1,26 +1,25 @@
-const CouponCodeModel = require("../model/CouponCode");
 
-const { ObjectID } = require("mongodb");
+const { ObjectId } = require("mongodb");
 const mongoose = require("mongoose");
-const Search = require("../model/Search");
 AutoID = mongoose.Types.ObjectId;
 
 const schemaOrders = new mongoose.Schema(
   {
     _id: {
-      type: ObjectID,
+      type: ObjectId,
       required: true,
       default: AutoID,
     },
     productID: {
-      type: ObjectID,
+      type: ObjectId,
       required: true,
       default: null,
       ref: "Products",
     },
     purchaseDateTime: {
       type: Date,
-      required: false,
+      required: true,
+      default: new Date()
     },
     orderCode: {
       type: String,
@@ -29,7 +28,7 @@ const schemaOrders = new mongoose.Schema(
       unique: true,
     },
     userID: {
-      type: ObjectID,
+      type: ObjectId,
       required: false,
       default: null,
       ref: "User",
@@ -55,15 +54,6 @@ const schemaOrders = new mongoose.Schema(
         "refunded",
       ],
       default: "pending",
-    },
-    refund: {
-      date: Date,
-      message: String,
-      refundedPrice: Object,
-      status: {
-        type: Boolean,
-        default: false,
-      },
     },
   },
   {
