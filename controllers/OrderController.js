@@ -22,7 +22,7 @@ const controller = {
           }
 
 
-        // I'll continue with request body && validation (/w using joi)
+        // I'll continue with request body && validation (/w using joi).
 
         const { productID, userID, orderCode, lang, totalPrice, status} = req.body;
 

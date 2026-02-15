@@ -1,1 +1,1 @@
-# shoppingo express
+# shoppingo-express
